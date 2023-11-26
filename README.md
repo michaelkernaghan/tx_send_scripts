@@ -1,22 +1,19 @@
 # Sepolia Ethereum Test Scripts
 
-Welcome to the Sepolia Ethereum Test Scripts repository, a resourceful collection of JavaScript scripts tailored for various operations on the Sepolia Ethereum testnet. These scripts are invaluable for developers aiming to perform test transactions, check balances, explore block histories, and interact with Ethereum contracts in a testing environment.
+Welcome to the Sepolia Ethereum Test Scripts repository. This collection offers a variety of JavaScript scripts for diverse operations on the Sepolia Ethereum testnet, including transactions, balance checks, block history exploration, and contract interactions.
 
-## Directory Structure
+## Directory Structure and Key Scripts
 
-Below is an overview of the key files and their functions in this repository:
+Here's an overview of the repository:
 
-- `.env`: Contains environment variables such as API keys and private keys.
-- `get-ETH-balances-of-interest.js`: Script to check ETH balances of specified addresses.
-- `send_all.js`: Script to send multiple transactions in a sequence.
-- `send_a_to_[a-e].js`: Scripts for sending transactions from address A to addresses A through E.
-- `send_b_to_[a-e].js` and `send_b_to_[a-e]_*.js`: Scripts for sending transactions from address B to various addresses with different configurations.
-- `send_c_to_[a-e].js`: Scripts for sending transactions from address C to addresses A through E.
-- `send_d_to_e.js`: Script for sending a transaction from address D to E.
-- `sendFull.js`: A comprehensive script for sending a full-featured transaction.
-- `send_nine_txs.sh`: Shell script to execute nine transactions sequentially.
-- `send_no_maxes.js`: Script to send a transaction without specifying max priority and max fee.
-- `tx-history-from-axios.js`: Utility script to fetch transaction history using Axios.
+- `.env`: Environment variables like API keys and private keys.
+- `send_all.js`, `send_a_to_[a-e].js`, `send_b_to_[a-e].js`, `send_c_to_[a-e].js`, `send_d_to_e.js`: Scripts for sending transactions between specified addresses.
+- `sendFull.js`: Sends a full-featured transaction.
+- `send_nine_txs.sh`: Executes nine transactions in sequence.
+- `send_no_maxes.js`: Sends a transaction without max priority and max fee. Note that ethers throws an error for this.
+- `tx-history-from-axios.js`: Fetches transaction history using Axios.
+- `send_b_to_uniswap_contract.js`: Interacts with the Uniswap contract on Sepolia for ERC-20 token swapping.
+- `send_batch_transactions.js`: This script automates the process of sending transactions in a batch between multiple parties. It cycles through a list of predefined parties (like Alice, Bob, and Carol) and sends transactions from each one to all the others. This script is particularly useful for testing transaction flows in a more comprehensive and automated manner.
 
 ## Installation
 
@@ -40,21 +37,21 @@ YOUR_PRIVATE_KEY=your_other_private_key_here
 
 ## Usage
 
-Execute any of the provided scripts with Node.js. For instance:
+Run any script using Node.js. For batch transaction sending:
 
 ```bash
-node send_a_to_b.js
+node send_batch_transactions.js
 ```
 
-This command will run the script to send a transaction from address A to address B on the Sepolia testnet.
+This command runs the script to send multiple transactions between predefined parties on the Sepolia testnet.
 
 ## Contributing
 
-Your contributions to improve or extend the functionality of these scripts are welcome. Please adhere to standard pull request protocols.
+Feel free to contribute to the improvement or extension of these scripts. Adhere to standard pull request protocols when contributing.
 
 ## Disclaimer
 
-These scripts are intended for use on the Sepolia Ethereum testnet for testing purposes only. Do not use them with real Ether or on the Ethereum mainnet.
+These scripts are for Sepolia Ethereum testnet use only. They are not intended for real Ether transactions or use on the Ethereum mainnet.
 
 ## License
 
