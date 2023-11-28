@@ -8,8 +8,8 @@ Here's an overview of the repository:
 
 - `.env`: Environment variables like API keys and private keys.
 - `send_all.js`, `send_a_to_[a-e].js`, `send_b_to_[a-e].js`, `send_c_to_[a-e].js`, `send_d_to_e.js`: Scripts for sending transactions between specified addresses.
-- `sendFull.js`: Sends a full-featured transaction.
 - `send_nine_txs.sh`: Executes nine transactions in sequence.
+- `send_b_to_e_responses` : prints out all responses from server during the transaction.
 - `send_no_maxes.js`: Sends a transaction without max priority and max fee. Note that ethers throws an error for this.
 - `tx-history-from-axios.js`: Fetches transaction history using Axios.
 - `send_b_to_uniswap_contract.js`: Interacts with the Uniswap contract on Sepolia for ERC-20 token swapping.
